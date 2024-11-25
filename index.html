@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>图像对比-AILAB</title>
+    <!-- 确保引入完整的 TwentyTwenty 样式 -->
+    <link rel="stylesheet" href="./css/foundation.css">
+    <link rel="stylesheet" href="./css/twentytwenty.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: flex-start; /* 让内容对齐到顶部 */
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    overflow-y: auto; /* 允许垂直滚动 */
+}
+
+.container {
+    width: 90%;
+    max-width: 1440px;
+    text-align: center;
+    padding: 20px; /* 增加一些内边距 */
+}
+
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+
+        <h5>1200000㎡ 无LOD全局模型与LOD模型局部细节对比</h5>
+        <!-- 第1组对比 -->
+        <div class="twentytwenty-container">
+            <img src="./img/Before_02.png" alt="Before">
+            <img src="./img/After_02.png" alt="After">
+        </div>
+
+    </div>
+
+    <!-- 确保按照正确顺序加载 jQuery 和插件 -->
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/jquery.event.move.js"></script>
+    <script src="./js/jquery.twentytwenty.js"></script>
+    <script>
+        $(function(){
+            $(".twentytwenty-container").twentytwenty({
+                default_offset_pct: 0.5, // 默认偏移50%
+                move_slider_on_hover: false, // 悬停时不移动滑块
+                move_with_handle_only: true, // 只能通过手柄移动
+                click_to_move: true // 点击可以移动
+            });
+        });
+    </script>
+</body>
+</html>
